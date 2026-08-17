@@ -1,0 +1,21 @@
+.DS_Store
+.vscode/
+
+# Qt/CMake build output
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# Compiled files
+*.o
+*.obj
+*.app
+*.exe
+
+# Qt generated files
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
