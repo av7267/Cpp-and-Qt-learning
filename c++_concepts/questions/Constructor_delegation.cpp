@@ -19,13 +19,12 @@ class Person{
 
     Person(string name): Person(name, 0 , "unknown")
     {
-        // this -> name = name;
+        
     }
     
     Person(string name,int age) : Person(name,age,"Unknown")
     {
-        // this -> age = age;
-        // this -> name = name;
+        
     }
 
     Person(string name, int age ,string city) : name(name),age(age),city(city)
