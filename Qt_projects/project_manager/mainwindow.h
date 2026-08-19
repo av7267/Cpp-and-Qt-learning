@@ -37,6 +37,12 @@ private slots:
 
     void on_logoutbtn_clicked();
 
+    void on_add_proj_2_clicked();
+
+    void on_homebtn_clicked();
+
+    void updated_project_counts();
+
 private:
     QVector<Project> projects;
 
