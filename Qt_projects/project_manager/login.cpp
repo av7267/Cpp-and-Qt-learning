@@ -18,6 +18,6 @@ void MainWindow::on_loginbutton_clicked()
     }
     else
     {
-        ui->stackedWidget->setCurrentWidget(ui->project_manager);
+        ui->stackedWidget->setCurrentWidget(ui->Dashboard);
     }
 }

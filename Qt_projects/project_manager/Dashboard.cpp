@@ -3,3 +3,12 @@
 #include "Dashboard.h"
 
 
+
+
+
+
+void MainWindow::on_logoutbtn_clicked()
+{
+    ui -> stackedWidget -> setCurrentWidget(ui -> login);
+}
+

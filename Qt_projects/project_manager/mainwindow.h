@@ -35,6 +35,8 @@ private slots:
 
     void on_backbtn_clicked();
 
+    void on_logoutbtn_clicked();
+
 private:
     QVector<Project> projects;
 
