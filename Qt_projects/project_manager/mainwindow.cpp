@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
 
-    ui->stackedWidget->setCurrentWidget(ui->login);
+    ui->stackedWidget->setCurrentWidget(ui->login);  //starting page
     
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     //login button
@@ -22,6 +22,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+
 
 
 

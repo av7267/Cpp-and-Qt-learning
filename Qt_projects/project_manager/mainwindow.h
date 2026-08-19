@@ -9,6 +9,15 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
+
+struct Project
+{
+    QString name;
+    QString description;
+    QString priority;
+    QString status;
+};
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -22,7 +31,18 @@ private slots:
 
     void on_add_proj_clicked();
 
+    void on_tableWidget_cellClicked(int row, int column);
+
+    void on_backbtn_clicked();
+
 private:
+    QVector<Project> projects;
+
+    Project currentProject;
+
     Ui::MainWindow *ui;
 };
+
+
+
 #endif // MAINWINDOW_H
