@@ -1,4 +1,3 @@
-#include "project_details.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -33,6 +32,8 @@ void MainWindow::on_Taskbtn_clicked()
 
         ui->Task_table->setItem(row, 2, new QTableWidgetItem(task.TaskStatus));
     }
+
+    updated_task_counts();
 
     ui->lbl_proj_name->setText(projects[currentProjectIndex].name);
 

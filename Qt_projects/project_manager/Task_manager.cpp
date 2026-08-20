@@ -44,27 +44,36 @@ void MainWindow::on_projectsbtn_clicked()   //this button goes back to the proje
 }
 
 
-void MainWindow :: updated_task_counts()
+void MainWindow::updated_task_counts()
 {
-    //tasks 
+    //count of active tasks and completed tasks
     int tasks_active = 0;
     int tasks_completed = 0;
 
-    for(int row =0; row < ui->Task_table ->rowCount();row++)
+    if(currentProjectIndex < 0 || currentProjectIndex >= projects.size())
     {
-        QString st = ui-> Task_table -> item(row,2) -> text();  //checking in the status row in task table
+        ui->Active_number->display(0);
+        ui->completed_number->display(0);
+        return;
+    }
 
-        if(st == "Active")
+    const QList<Task>& projectTasks = projects[currentProjectIndex].tasks;
+
+    for(const Task& task : projectTasks)
+    {
+        if(task.TaskStatus == "Active")
         {
             tasks_active++;
         }
-        else if(st == "Completed")
+        else if(task.TaskStatus == "Completed")
         {
             tasks_completed++;
         }
     }
 
     //project details page lcd displays of tasks active and tasks completed
-    ui -> Active_number -> display(tasks_active);
-    ui -> completed_number -> display(tasks_completed);
+    ui->Active_number->display(tasks_active);
+    ui->completed_number->display(tasks_completed);
 }
+
+

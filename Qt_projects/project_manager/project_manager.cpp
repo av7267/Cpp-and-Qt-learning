@@ -1,4 +1,3 @@
-#include "project_manager.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -58,7 +57,8 @@ void MainWindow::on_tableWidget_cellClicked(int row, int column)
     ui->project_priority->setText(currentProject.priority);
     ui->project_status->setText(currentProject.status);
 
-
+    // Update task LCDs for the newly selected project
+    updated_task_counts();
 
     ui->stackedWidget->setCurrentWidget(ui->Project_details);
 
