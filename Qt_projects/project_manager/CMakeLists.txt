@@ -15,8 +15,9 @@ qt_add_executable(project_manager
     Dashboard.h Dashboard.cpp
     login.h login.cpp
     project_manager.h project_manager.cpp
-    project_details.h project_details.cpp
+
     Task_manager.cpp
+    project_details.cpp
 
 
 

@@ -60,6 +60,8 @@ private slots:
 
     void on_projectsbtn_clicked();
 
+    void updated_task_counts();
+
 private:
     QVector<Project> projects;
 

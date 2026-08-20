@@ -58,6 +58,8 @@ void MainWindow::on_tableWidget_cellClicked(int row, int column)
     ui->project_priority->setText(currentProject.priority);
     ui->project_status->setText(currentProject.status);
 
+
+
     ui->stackedWidget->setCurrentWidget(ui->Project_details);
 
 }
@@ -68,14 +70,14 @@ void MainWindow::on_homebtn_clicked()
 }
 
 
-void MainWindow::updated_project_counts()
+void MainWindow::updated_project_counts()    
 
 {
+    //projects active and completed
     int activecount = 0;
     int completedcount = 0;
 
-
-    for(int row = 0; row< ui->tableWidget->rowCount();row++)
+    for(int row = 0; row < ui->tableWidget->rowCount();row++)
     {
         QString status = ui -> tableWidget -> item(row,2) -> text(); //extract the text of the column 2 and store it in status and then loop over
 
@@ -89,6 +91,8 @@ void MainWindow::updated_project_counts()
         }
 
     }
+
+    //dashboard ui lcd displays
 
     ui -> proj_count -> display(ui -> tableWidget -> rowCount());
     ui -> active_proj_count -> display(activecount);

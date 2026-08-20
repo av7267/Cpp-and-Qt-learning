@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="login">
      <widget class="QLineEdit" name="username">
@@ -306,7 +306,7 @@
      <widget class="QLabel" name="lbl_proj_name">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>350</x>
         <y>0</y>
         <width>111</width>
         <height>31</height>
@@ -319,7 +319,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Project name</string>
+       <string>Name</string>
       </property>
      </widget>
     </widget>
@@ -682,7 +682,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Tasks</string>
+       <string>Tasks Active</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="proj_completed">
@@ -690,15 +690,15 @@
        <rect>
         <x>100</x>
         <y>480</y>
-        <width>100</width>
+        <width>111</width>
         <height>32</height>
        </rect>
       </property>
       <property name="text">
-       <string>Completed</string>
+       <string>Tasks Completed</string>
       </property>
      </widget>
-     <widget class="QLCDNumber" name="Tasks_number">
+     <widget class="QLCDNumber" name="Active_number">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -749,7 +749,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Project Manager</string>
+       <string>DASHBOARD</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignmentFlag::AlignCenter</set>
