@@ -10,13 +10,24 @@ class MainWindow;
 QT_END_NAMESPACE
 
 
+struct Task
+{
+    QString TaskName;
+    QString TaskStatus;
+    QString TaskPriority;
+};
+
 struct Project
 {
     QString name;
     QString description;
     QString priority;
     QString status;
+
+    QList<Task> tasks;
+
 };
+
 
 class MainWindow : public QMainWindow
 {
@@ -43,10 +54,20 @@ private slots:
 
     void updated_project_counts();
 
+    void on_Taskbtn_clicked();
+
+    void on_Task_addbtn_clicked();
+
+    void on_projectsbtn_clicked();
+
 private:
     QVector<Project> projects;
 
+    int currentProjectIndex = -1;
+
     Project currentProject;
+
+    
 
     Ui::MainWindow *ui;
 };

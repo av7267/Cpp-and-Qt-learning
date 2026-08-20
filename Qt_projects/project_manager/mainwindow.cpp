@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->setCurrentWidget(ui->login);  //starting page
     
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
+        ui->Task_table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     //login button
     connect(ui -> loginbutton, &QPushButton :: clicked,this, &MainWindow :: on_loginbutton_clicked);
     connect(ui -> add_proj, &QPushButton :: clicked,this, &MainWindow :: on_add_proj_clicked);
@@ -22,6 +24,9 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+
 
 
 

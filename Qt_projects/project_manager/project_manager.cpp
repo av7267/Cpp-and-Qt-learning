@@ -49,6 +49,8 @@ void MainWindow::on_tableWidget_cellClicked(int row, int column)
 {
     Q_UNUSED(column);
 
+    currentProjectIndex = row;
+
     currentProject = projects[row];
 
     ui->projectname->setText(currentProject.name);
@@ -58,10 +60,7 @@ void MainWindow::on_tableWidget_cellClicked(int row, int column)
 
     ui->stackedWidget->setCurrentWidget(ui->Project_details);
 
-
 }
-
-
 
 void MainWindow::on_homebtn_clicked()
 {
